@@ -6,16 +6,27 @@
 </head>
 <body>
     <script>
+        //convencionamos que toda função será declarada no inicio do código JS
+        function pulaLinha() { // criando função JS
+            document.write('<br>');
+            document.write('<br>');
+        }
+
+        function mostra(texto) { // essa função terá como argumento (texto)
+            document.write(texto); // texto será o argumento de write (texto) ou seja: escreve texto na tela
+            pulaLinha();
+        }
+
         var tanque = 40;
         var caminhoComGasolina = 480;
         var consumoDeGasolina = caminhoComGasolina / tanque;
         var caminhoComAlcool = 300;
         var consumoDeAlcool = caminhoComAlcool / tanque;
 
-        document.write('<h3> Alcool ou Gasolina </h3>')
+        mostra('<h3> Alcool ou Gasolina ? </h3>');
         
-        document.write(`<br>O consumo de gasolina é de ${consumoDeGasolina} KM/L`)
-        document.write(`<br>O consumo de álcool é de ${consumoDeAlcool} KM/L`)
+        mostra(`O consumo de gasolina é de ${consumoDeGasolina} KM/L`); // mostra(texto)
+        mostra(`O consumo de álcool é de ${consumoDeAlcool} KM/L`); // mostra(texto)
         </script>
 </body>
 </html>
