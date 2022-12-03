@@ -13,6 +13,17 @@
             document.write(texto);
             pulaLinha();
         }
+        function calculaImc(peso, altura) { // criamos uma função para otimizar o código
+            return peso / (altura * altura);
+        }
+        var nome = prompt('Informe o seu nome');
+        var peso = prompt(`${nome}, imforme seu peso em Kg`);
+        var altura = prompt(`${nome}, imforme sua altura em m`);
+
+        imc = calculaImc(peso, altura);
+
+        mostra(`${nome} o seu IMC calculado é : ${imc}`);
+
     </script>
 </body>
 </html>
