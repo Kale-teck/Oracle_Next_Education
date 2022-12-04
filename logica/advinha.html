@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de advinha</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write('<br>');
+        }
+
+        function mostra(texto) {
+            document.write(texto);
+            pulaLinha();
+        }
+
+        var numeroPensado = 5;
+        var chute = parseInt(prompt('Chute um número qualquer'));
+
+        if (numeroPensado == chute) {
+            mostra(`Você acertou !`);
+        }        
+        if (numeroPensado ~ chute) {
+            mostra(`Você errou !`);
+        }        
+    </script>
+</body>
+</html>
