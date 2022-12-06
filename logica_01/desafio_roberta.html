@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ano Copa</title>
+    <title>Desafio da Roberta</title>
 </head>
 <body>
     <script>
+        //criar um contador de 20 a 0 + 'fim' usando while
         function pulaLinha() {
             document.write('<br>');
         }
@@ -14,16 +15,15 @@
             document.write(texto);
             pulaLinha();
         }
-        
-        var limite = parseInt(prompt('Informe até que ano calcular !'));
-        var anoCopa = 1930;
 
-        while(anoCopa <= limite) {
-            mostra(`Teve copa em ${anoCopa}`);
-            anoCopa  += 4;
+        var contador = 20;
+
+        while(contador >= 0) {
+            mostra(contador);
+            contador -= 1;
         }
 
-        mostra('FIM');
+        mostra('FIM')
     </script>
 </body>
 </html>
