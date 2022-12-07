@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Média de Idade dos Familiares</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write('<br><br>');
+        }
+
+        function mostra(texto) {
+            document.write(texto);
+            pulaLinha();
+        }
+
+        var totalFamiliares = parseInt(prompt(`Quantos parentes você tem ?`));
+
+        var contador = 0;
+        var totalIdades = 0; // nunca inicialize variáveis dentro de laços a menos que queira zerá-la a cada passagem
+        while (contador < totalFamiliares) {
+            var idade;
+            idade = parseInt(prompt(`Informe a idade do parente ${contador + 1}`));
+            totalIdades += idade;
+            contador++;
+        }
+
+        media = Math.round(totalIdades/totalFamiliares);
+        mostra(`A média da idade dos seus ${totalFamiliares} parentes é de ${media} anos !`);
+
+    </script>
+</body>
+</html>
