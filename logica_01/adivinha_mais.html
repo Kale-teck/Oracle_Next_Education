@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adivinha mais</title>
+</head>
+<body>
+
+    <input type="number">
+    <button>Compare com meu segredo</button>
+
+    <script>
+        //declarando o primeiro array em JS
+        var segredos = [5,7,10,2,3];
+        
+        //precisamos trazer os dados inseridos no html para o JS
+        var input = document.querySelector('input');
+        input.focus();
+        
+        function verifica() {
+            var achou = false;
+            for (var posicao = 0; posicao < segredos.length; posicao++) {
+                if (input.value == segredos[posicao]) {
+                    alert('Você ACERTOU !');
+                    achou = true;
+                    break;
+                }
+            }
+            if (achou == false) {
+                alert('Você errou !');
+            }
+            input.value = ''; //para limpar o campo input após o resultado
+            input.focus(); // volta o foco para o campo de input
+        }
+        //Precisamos captar o evento clicar no botão do html para disparar a função
+        var button = document.querySelector('button');
+        button.onclick = verifica; // em JS uma função sem parentes não é executada mas sim retorna seu bloco de código
+        //com o código da função verifica() dentro do onclick ele será excutado ao clicar no botão
+
+    </script>
+</body>
+</html>
