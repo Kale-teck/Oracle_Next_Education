@@ -10,13 +10,41 @@
     <button>Compare com meu segredo</button>
 
     <script>
+
+        function sorteia() {
+            return Math.round(Math.random() * 10); //retorna numero aleatório 0 a 10
+        }
+
+        function sorteiaNumeros(quantidade) {
+            var segredos = []; //essa segredos não é a mesma de fora da função
+            var contador = 1;
+            while (contador <= quantidade) {
+                var numeroAleatorio = sorteia();
+                if (numeroAleatorio != 0) { // condição que elimina zeros
+                    var achou = false; //false pq ainda não foi testado a repetição
+                    for (var posicao = 0; posicao < segredos.length; posicao++) {
+                        if(segredos[posicao] == numeroAleatorio) {
+                            achou = true; //avisa que achou número repetido
+                            break; //sai do for
+                        }
+                    }
+                    if (achou == false) { //se não for repetido
+                    segredos.push(numeroAleatorio); //adiciona o aleatório gerado
+                    contador++; // incrmenta o contador do while
+                    } // fecha este if
+                } // fecha if teste de zero
+            } // fecha while
+            return segredos; //retorna os numeros aleatorios conforme parametro
+        } // fecha função
+
         //declarando o primeiro array em JS
-        var segredos = [5,7,10,2,3];
+        var segredos = sorteiaNumeros(5); //segredos = "segredos(5X)"
         
+        console.log(segredos); // só para conferir no console
         //precisamos trazer os dados inseridos no html para o JS
         var input = document.querySelector('input');
         input.focus();
-        
+
         function verifica() {
             var achou = false;
             for (var posicao = 0; posicao < segredos.length; posicao++) {
@@ -26,6 +54,7 @@
                     break;
                 }
             }
+
             if (achou == false) {
                 alert('Você errou !');
             }
