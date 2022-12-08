@@ -1,0 +1,33 @@
+<canvas width="600" height="400"></canvas> <!--Tag que permite desenhar na página-->
+
+<script>
+    //vamos acessar o canvas pelo JS
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d'); // habilita um pincel 2D em tela
+
+    pincel.fillStyle = 'lightGrey'; //cor do pincel cinza claro
+    pincel.fillRect(0, 0, 600, 400); // coordenadas cartezianas de inicio e fim
+    // criar um retângulo 200,100
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400);
+    // criar um retângulo vermelho lado direito
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400);
+    //desenhar um triângulo amarelo
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath(); // recebe um caminho com parâmetro
+    //colocar o pincel no meio da tela
+    //lenbrando que o eixo vertical incrementa de cima pra baixo
+    pincel.moveTo(300, 200);// pincel no meio
+    pincel.lineTo(200, 400);// diagonal esquerda do triângulo (descendo do centro(pincel) até 400 (rodapé))
+    pincel.lineTo(400, 400);// diagonal direita (do pincel(centro) até embaixo)
+    pincel.fill(); //preenche a forma geométrica criada
+
+    //criar um circulo
+    pincel.fillStyle = 'blue'; //mudar cor do pincel
+    pincel.beginPath(); //definir no ponto de inicio (novo caminho)
+    //arc (eixo1, eixo2, size(raio), ang init, ang end)
+    pincel.arc(300, 200, 50, 0, 2 * 3.14); //circulo 
+    pincel.fill(); //preenche o circulo
+
+</script>
