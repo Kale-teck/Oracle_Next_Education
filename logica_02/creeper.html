@@ -1,6 +1,17 @@
-<canvas></canvas>
+<canvas width="150" height="150"></canvas>
 
 <script>
+    var tela = document.querySelector('canvas'); //pega a tag canvas do html
+    var pincel = tela.getContext('2d'); //habilita para desenhos 2D
 
-    
+    pincel.fillStyle = 'green'; //cor verde
+    pincel.fillRect(0, 0, 150, 150); //prenche um retangulo de tais dimensões
+
+    pincel.fillStyle = 'black'; //criar pixels pretos (rosto)
+    pincel.fillRect(25, 25, 25, 25); // olho esquerdo
+    pincel.fillRect(100, 25, 25, 25);
+    pincel.fillRect(50, 50, 50, 50);
+    pincel.fillRect(37.5, 75, 12.5, 150);
+    pincel.fillRect(100, 75, 12.5, 150);
+
 </script>
