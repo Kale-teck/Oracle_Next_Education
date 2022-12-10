@@ -1,0 +1,23 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas'); //pega a tag  canvas do html
+    var pincel = tela.getContext('2d'); // habilita um pincel 2d
+    
+    pincel.fillStyle = 'black'; // tinta preta
+    pincel.beginPath(); // inicia função
+    pincel.moveTo(50, 50); // move pincel
+    pincel.lineTo(50, 400); // desenha linha
+    pincel.lineTo(400, 400); // desenha outra linha
+    pincel.fill();
+    
+    pincel.fillStyle = 'white'; //tinta branca
+    pincel.beginPath(); // inicia função
+    pincel.moveTo(100, 175); // move pincel
+    pincel.lineTo(275, 350); // cria linha
+    pincel.lineTo(100, 350); // outra linha
+    pincel.fill(); // preenche segundo triângulo
+
+
+
+</script>
