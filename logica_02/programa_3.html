@@ -1,0 +1,53 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+    // existe um parâmetro passado pelo navegador à função
+    var cor = 'blue'; // declarei a var fora para escopo global
+    var raio = 10
+    function desenhaBolinha(evento) { // o próprio navegador retornará os dados
+        var x = evento.pageX - tela.offsetLeft; //exclui borda das cordenadas
+        var y = evento.pageY - tela.offsetTop; //exclui borda das cordenadas
+        if (raio <= 40) {
+            if (evento.shiftKey) {
+                raio += 10;
+            }
+        }
+        if (raio >= 10) {
+            if (evento.altKey) {
+                raio -= 5;
+            }
+        }
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * 3.14);
+        pincel.fill();
+        console.log(evento); // exibe no console os dados do mouse
+    }
+    var contador = 1; // cor foi declarada azul, por isso contador
+    function mudaCor() {
+        if (contador < 3) {
+            if (contador == 0) {
+                cor = 'blue';
+            }
+            if (contador == 1) {
+                cor = 'red';
+            }
+            if (contador == 2) {
+                cor = 'green';
+            }
+            contador++;
+        }
+        if (contador == 3) {
+            contador = 0;
+        }
+        return cor;
+    }
+    // evento de clique do mouse ao clicar na tela
+    tela.onclick = desenhaBolinha; // função sem () para não ser executada, apenas armazenada em memória
+    tela.oncontextmenu = mudaCor;
+</script>
