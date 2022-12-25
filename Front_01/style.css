@@ -1,3 +1,6 @@
+.titulo-principal {
+    padding-left: 20px;
+}
 
 #banner {
     width: 100%;
@@ -5,9 +8,10 @@
 
 .principal {
     background: #CCCCCC;
+    padding: 30px;
 }
 
-h1 {
+.titulo-centralizado {
     text-align: center;
 }
 
@@ -27,10 +31,20 @@ em strong {
     font-style: italic;
 }
 
-.beneficios {
+.beneficios_1 {
     background: #FFFFFF;
+    padding: 20px;
 }
 
-h2 {
-    text-align: center;
+.beneficios_2 {
+    display: flex;
+}
+
+ul {
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imgbeneficios {
+    width: 50%;
 }
