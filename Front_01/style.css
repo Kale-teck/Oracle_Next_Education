@@ -43,6 +43,7 @@ em strong {
 
 .beneficios_2 {
     display: flex;
+    justify-content: space-between;
 }
 
 h3 {
@@ -67,5 +68,4 @@ h3 {
 
 .imgbeneficios {
     width: 50%;
-    margin-left: 300px;
 }
