@@ -42,3 +42,18 @@ form label, form legend {
     background: darkorange;
     transform: scale(1.2); /*aumenta o tamanho do botão em 20%*/
 }
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead {
+    background-color: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px 15px;
+}
