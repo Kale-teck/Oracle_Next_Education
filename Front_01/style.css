@@ -65,8 +65,13 @@ footer {
     font-size: 2em;
     margin-bottom: 1em;
     clear: left;
+    color: rgba( 0, 0, 0, 1);
+    transition: 500ms;
 }
 
+.titulo-principal:hover {
+    color: rgba( 0, 0, 0, 0.5);
+}
 
 .principal p {
     margin: 0 0 1em;
@@ -128,6 +133,13 @@ footer {
 
 .imagem_beneficios {
     width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px #000000;
+}
+
+.imagem_beneficios:hover {
+    opacity: 0.3;
 }
 
 .video {
