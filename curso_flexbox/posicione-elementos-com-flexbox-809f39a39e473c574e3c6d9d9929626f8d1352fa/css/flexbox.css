@@ -7,3 +7,32 @@
 .cabecalhoPrincipal-nav {
     display: flex;
 }
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+}
+
+.rodapePrincipal-contatoForm {
+    width: 25%;
+}
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+  /*flex-direction: column;
+    flex-wrap: wrap;*/
+    flex-flow: column wrap; /*o flex-flow substitui as duas linhas anteriores*/
+    height: 260px; /*sempre que a list atingir height>260px dá um wrap*/
+}
