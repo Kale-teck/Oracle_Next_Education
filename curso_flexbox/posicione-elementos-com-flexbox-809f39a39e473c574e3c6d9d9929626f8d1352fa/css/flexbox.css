@@ -1,3 +1,4 @@
+/* Estilos cabeçalho*/
 .cabecalhoPrincipal .container {
     display: flex;
     align-items: center;
@@ -8,6 +9,27 @@
     display: flex;
 }
 
+/* main */
+.conteudoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.conteudoPrincipal-cursos-link {
+    width: 23%;
+    margin: 1%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n) { /*pega multiplos de 4 no grid*/
+    margin-right: 0;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1) { /*pega multiplos de 5 no grid*/
+    margin-left: 0;
+}
+
+/* footer */
 .rodapePrincipal-patrocinadores .container {
     display: flex;
     justify-content: space-between;
@@ -35,4 +57,15 @@
     flex-wrap: wrap;*/
     flex-flow: column wrap; /*o flex-flow substitui as duas linhas anteriores*/
     height: 260px; /*sempre que a list atingir height>260px dá um wrap*/
+}
+
+/* MOBILE */
+/* header */
+
+.cabecalhoPrincipal-nav {
+    flex-direction: column;
+}
+
+.cabecalhoPrincipal .container {
+    flex-direction: column;
 }
