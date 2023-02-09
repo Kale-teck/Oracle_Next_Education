@@ -75,7 +75,7 @@
 
 .cabecalhoPrincipal-nav-link-app {
     order: -1; /* por padrão todos são zero */
-    /* para ser o primeiro = -1, para ser o último = 1
+    /* para ser o primeiro = -1, para ser o último = 1 */
 }
 
 /*main */
