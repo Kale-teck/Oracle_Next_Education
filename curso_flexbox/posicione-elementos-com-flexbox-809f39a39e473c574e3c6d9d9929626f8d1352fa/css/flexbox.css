@@ -29,6 +29,24 @@
     margin-left: 0;
 }
 
+.videoSobre .container {
+    display: flex;
+}
+
+.videoSobre-sobre {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* alinhar na vertical */
+    flex-grow: 2; /* preenche o espaço sobrando */
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 1; /* traz o espaço sobrando do elemento pai para esse */ 
+}
+
+.videoSobre-video {
+    flex-grow: 1;
+}
 /* footer */
 .rodapePrincipal-patrocinadores .container {
     display: flex;
@@ -85,6 +103,16 @@
 
 .conteudoPrincipal-cursos-link {
     width: 100%;
+}
+
+.videoSobre .container {
+    flex-direction: column;
+}
+
+.videoSobre-video {
+    flex-grow: 1;
+    flex-shrink: 2; /* cada vez que o zoom decresce aqui -2X */
+    margin: auto;
 }
 
 /* FOOTER */
