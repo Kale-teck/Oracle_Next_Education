@@ -1,0 +1,12 @@
+.menu_item {
+   list-style: none;
+}
+
+.menu_item:first-child {
+   color: #333333;
+   font-weight: bold;
+}
+
+.menu_item:last-child {
+   margin-right: 0%;
+}
