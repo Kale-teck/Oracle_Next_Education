@@ -1,4 +1,9 @@
 .banner_imagem {
+   /*background-image: url('../../img/banner.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;*/
+   background: url('../../img/banner.jpg') no-repeat center / cover; /* essa linha é a forma resumida das 4 anteriores*/
    height: calc(100vh - 72px);
    width: 100%;
 }
