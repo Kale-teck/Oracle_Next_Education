@@ -1,27 +1,5 @@
-class Cliente {
-   nome;
-   cpf;
-}
-
-class ContaCorrente {
-   // #saldo = 0; seria uma boa forma de definir atributo privado porém por convenção usa-se _saldo
-   agencia;
-   _saldo = 0;
-
-   sacar(valor) {
-      if (this._saldo >= valor) {
-         this._saldo -= valor;
-         return valor;
-      }
-   }
-
-   depositar(valor) {
-      if (valor <= 0) {
-         return;
-      }
-      this._saldo += valor;
-   }
-}
+import {Cliente} from "./Cliente.js";
+import {ContaCorrente} from "./ContaCorrente.js";
 
 const cliente1 = new Cliente();
 cliente1.nome = 'Ricardo';
@@ -33,12 +11,16 @@ cliente2.cpf = 8882223309;
 
 const contaCorrenteRicardo = new ContaCorrente();
 contaCorrenteRicardo.agencia = 1001;
+contaCorrenteRicardo.cliente = cliente1;
+contaCorrenteRicardo.depositar(500);
+
+const contaCorrenteAlice = new ContaCorrente();
+contaCorrenteAlice.agencia = 1001;
+contaCorrenteAlice.cliente = cliente2;
+
+contaCorrenteRicardo.transferir(200, contaCorrenteAlice);
 
 
-contaCorrenteRicardo.depositar(-100);
-contaCorrenteRicardo.depositar(100);
-contaCorrenteRicardo.depositar(100);
-valorSacado = contaCorrenteRicardo.sacar(50);
 
-console.log(valorSacado)
-console.log(contaCorrenteRicardo)
+console.log(contaCorrenteRicardo);
+console.log(contaCorrenteAlice);
