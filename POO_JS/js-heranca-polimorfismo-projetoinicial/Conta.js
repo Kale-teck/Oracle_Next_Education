@@ -1,8 +1,15 @@
+//por não poder ser chamada diretamente, dar-se o nome de Classe Abstrata
+//pois a classe Conta não pode ser herdada diretamente, apenas através de outras classes
 export class Conta{
    constructor(saldoInicial, cliente, agencia) {
+       if (this.constructor == Conta) {
+         throw new Error('Você não deveria instanciar um objeto do tipo conta');
+       }
+
       this._saldo = saldoInicial;
       this._cliente = cliente;
       this._agencia = agencia;
+
    }
 
    set cliente(novoValor){
@@ -20,13 +27,18 @@ export class Conta{
   }
 
    sacar(valor){
-      let taxa = 1
+        let taxa = 1;
+        return this._sacar(valor, taxa);
+  }
 
-      const valorSacado = taxa * valor;
-      if(this._saldo >= valorSacado){
-          this._saldo -= valorSacado;
-          return valorSacado;
-      }
+  _sacar(valor, taxa) {
+    const valorSacado = taxa * valor;
+    if(this._saldo >= valorSacado){
+        this._saldo -= valorSacado;
+        return valorSacado;
+    }
+
+    return 0;
   }
 
   depositar(valor){
